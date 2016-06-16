@@ -1,5 +1,5 @@
 /*
- * A User class thatholds all the required info about the user. Contains
+ * A User class that holds all the required info about the user. Contains
  * 2 String fields to store user's name and password and 1 HashMap field
  * to store the list uf user's Contact Lists. Provides a simple constructor
  * that takes in 2 strings as arguments for user's name and password and 
