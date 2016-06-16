@@ -91,7 +91,7 @@ public class Logic {
 
     /*
      Allows to register new user. Takes in user's name and password
-     ba calling takeUserNamePassword() method and seving it's result
+     by calling takeUserNamePassword() method and seving it's result
      in String userName and String password variables. Then the list
      of user objects is checked for same user name as given by the user.
      If user object with name given by the user already exists in the 
@@ -121,8 +121,7 @@ public class Logic {
                 System.out.println("User Name Available");
                 userDuplicate = false;
             }
-        } while (userDuplicate);
-        
+        } while (userDuplicate);        
         
         User newUser = new User(userName, password);        
         this.usersList.getUsersArrayList().add(newUser);
@@ -442,7 +441,6 @@ public class Logic {
                         + " you want to remove");
                 listName = scanText.nextLine();
                 Iterator listsIterator = user.getContactLists().entrySet().iterator();
-
                 while (listsIterator.hasNext()) {
                     Map.Entry thisEntry = (Map.Entry) listsIterator.next();
                     if (!thisEntry.getKey().toString().equals(listName)) {
@@ -454,8 +452,7 @@ public class Logic {
                         invalidName = false;
                         break;
                     }
-                }
-                
+                }                
                 if (noLists > 0) {
                     System.out.println("There is no such Contact List to be removed");
                 }
