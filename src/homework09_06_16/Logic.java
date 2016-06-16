@@ -213,7 +213,7 @@ public class Logic {
                     user = createContactList(user);
                     break;
                 case "2":
-                    System.out.println("View/Select Contact Lists");
+                    System.out.println("View Contact Lists");
                     userMenuLists(user);
                     break;
                 case "3":
