@@ -247,7 +247,8 @@ public class Logic {
                         System.out.println("Select the List");
                         usersContactMenu(user,
                             displayContactsFromList(
-                                    selectContactList(displayContactLists(user))));
+                                    selectContactList(
+                                            displayContactLists(user))));
                         break;
                     case "2":
                         removeContactList(displayContactLists(user));
