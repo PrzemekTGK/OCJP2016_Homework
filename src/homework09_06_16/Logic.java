@@ -209,7 +209,7 @@ public class Logic {
             switch (scanText.nextLine()) {
                 case "1":
                     System.out.println("Create Contact List");
-                    user = createContactList(user);
+                    createContactList(user);
                     break;
                 case "2":
                     System.out.println("Manage Contact Lists");
@@ -237,7 +237,7 @@ public class Logic {
         boolean userContinue = true;
         if (user.getContactLists().size() > 0) {
             do {
-                
+                displayContactLists(user);
                 System.out.println();
                 System.out.println("1. Select the List");
                 System.out.println("2. Remove the List");
@@ -394,7 +394,7 @@ public class Logic {
      Contact Lists. User Object is serialized after successful creation of
      the Contact List.
     */
-    public User createContactList(User user) {
+    public void createContactList(User user) {
         String listName;
         HashMap<String, String> contactList = new HashMap<>();
         boolean invalidName = true;
@@ -420,9 +420,7 @@ public class Logic {
             listName = scanText.nextLine();
         }
         user.getContactLists().put(listName, contactList);
-        serializeUsersList();
-        return user;
-    }
+        serializeUsersList();    }
     
     /*
      Asks user to enter the name of the list that user wants to remove and
@@ -499,7 +497,6 @@ public class Logic {
             number = scanText.nextLine();
             try {            
                 int tempNum = Integer.parseInt(number);
-                assert(tempNum > 0);
             } catch (NumberFormatException nfe){
                 System.out.println("Invalid Phone Number. No letters allowed in the "
                         + "Phone Number");
@@ -545,7 +542,6 @@ public class Logic {
             number = scanText.nextLine();
             try {            
                 int tempNum = Integer.parseInt(number);
-                assert(tempNum > 0);
             } catch (NumberFormatException nfe){
                 System.out.println("Invalid Phone Number. No letters allowed in the "
                         + "Phone Number");
@@ -594,7 +590,6 @@ public class Logic {
             number = scanText.nextLine();
             try {            
                 int tempNum = Integer.parseInt(number);
-                assert(tempNum > 0);
             } catch (NumberFormatException nfe){
                 System.out.println("Invalid Phone Number. No letters allowed in the "
                         + "Phone Number");
@@ -637,7 +632,6 @@ public class Logic {
             number = scanText.nextLine();
             try {            
                 int tempNum = Integer.parseInt(number);
-                assert(tempNum > 0);
             } catch (NumberFormatException nfe){
                 System.out.println("Invalid Phone Number. No letters allowed in the "
                         + "Phone Number");
