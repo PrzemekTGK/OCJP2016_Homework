@@ -75,7 +75,7 @@ public class Logic {
                                 + "able to log in.");
                     } else {
                         userLoggedIn = userLogin();
-                        userMenu(userLoggedIn);
+                        usersMenu(userLoggedIn);
                         
                     }
                     break;
@@ -201,11 +201,11 @@ public class Logic {
      match one of it's cases. Logged in user is passed into the method as
      an argument to have an access to user's contact lists.
     */
-    public void userMenu(User user) {
+    public void usersMenu(User user) {
         boolean userLogout = false;
         do {
             System.out.println("1. Create Contact List");
-            System.out.println("2. View Contact Lists");
+            System.out.println("2. Manage Contact Lists");
             System.out.println("3. Log Out");
             switch (scanText.nextLine()) {
                 case "1":
@@ -213,8 +213,8 @@ public class Logic {
                     user = createContactList(user);
                     break;
                 case "2":
-                    System.out.println("View Contact Lists");
-                    userMenuLists(user);
+                    System.out.println("Manage Contact Lists");
+                    usersContactListsMenu(user);
                     break;
                 case "3":
                     user = null;
@@ -228,18 +228,18 @@ public class Logic {
     }
     
     /*
-     Displays manu for View/Select Contact List option from userMenu method
+     Displays manu for View/Select Contact List option from usersMenu method
      together with all available Contact Lists. Contact Lists are displayed
      first with a call to diaplayUsersContactLists followed by menu for them
      and a switch statement to operate this menu. User object is passed into
      the method as an argument to get an access to user's List of Contact
      Lists.
     */
-    public void userMenuLists(User user){
+    public void usersContactListsMenu(User user){
         boolean userContinue = true;
         if (user.getContactLists().size() > 0) {
             do {
-                displayContactLists(user);
+                
                 System.out.println();
                 System.out.println("1. Select the List");
                 System.out.println("2. Remove the List");
@@ -247,12 +247,12 @@ public class Logic {
                 switch (scanText.nextLine()) {
                     case "1":
                         System.out.println("Select the List");
-                        userMenuContactList(user,
+                        usersContactMenu(user,
                             displayContactsFromList(
-                                    selectContactList(user)));
+                                    selectContactList(displayContactLists(user))));
                         break;
                     case "2":
-                        removeContactList(user);
+                        removeContactList(displayContactLists(user));
                         System.out.println("Remove the List");
                         break;
                     case "3":
@@ -277,7 +277,7 @@ public class Logic {
      List is passed into the method as an argument so the required operations
      can be performed on that List.
     */
-    public void userMenuContactList(User user, HashMap contactList) {
+    public void usersContactMenu(User user, HashMap contactList) {
         boolean userContinue = true;
         if (user.getContactLists().size() > 0) {
             do {
@@ -365,7 +365,8 @@ public class Logic {
                 System.out.println("Please Select User's Contact List "
                         + "(Type in the name of the list)");
                 String listName = scanText.nextLine();
-                Iterator usersListIterator = user.getContactLists().entrySet().iterator();
+                Iterator usersListIterator = user.getContactLists().entrySet()
+                        .iterator();
                 while (usersListIterator.hasNext()) {
                     Map.Entry thisEntry = (Map.Entry) usersListIterator.next();
                     if (thisEntry.getKey().equals(listName)) {
@@ -472,7 +473,7 @@ public class Logic {
      passed to this method as an argument to get acces to user's List of 
      Contact Lists.
     */
-    public void displayContactLists(User user) {
+    public User displayContactLists(User user) {
         int index = 0;
         Iterator listsIterator = user.getContactLists().entrySet().iterator();
         while (listsIterator.hasNext()) {
@@ -480,6 +481,7 @@ public class Logic {
             Map.Entry thisEntry = (Map.Entry) listsIterator.next();
             System.out.println(index + ". " + thisEntry.getKey());
         }
+        return user;
     }
 
     /*
