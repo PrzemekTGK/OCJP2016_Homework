@@ -227,12 +227,11 @@ public class Logic {
     }
     
     /*
-     Displays menu for View/Select Contact List option from userMenu method
-     together with all available Contact Lists. Contact Lists are displayed
-     first with a call to diaplayUsersContactLists followed by menu for them
-     and a switch statement to operate this menu. User object is passed into
-     the method as an argument to get an access to user's List of Contact
-     Lists.
+     Displays menu for View/Select Contact List option from userMenu method.
+     Contact Lists are displayed first with a call to diaplayUsersContactLists 
+     followed by menu for them and a switch statement to operate this menu. 
+     User object is passed into the method as an argument to get an access to 
+     user's List of Contact Lists.
     */
     public void userMenuLists(User user){
         boolean userContinue = true;
