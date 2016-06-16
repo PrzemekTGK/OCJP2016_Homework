@@ -227,7 +227,7 @@ public class Logic {
     }
     
     /*
-     Displays manu for View/Select Contact List option from userMenu method
+     Displays menu for View/Select Contact List option from userMenu method
      together with all available Contact Lists. Contact Lists are displayed
      first with a call to diaplayUsersContactLists followed by menu for them
      and a switch statement to operate this menu. User object is passed into
