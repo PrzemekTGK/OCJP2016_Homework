@@ -529,12 +529,12 @@ public class Logic {
     } 
    
     /*
-     Asks user for the Phone Number of the contact to remove from the user's 
-     Contact List. Check's if the contact with given Phone Number actually 
-     exists in the List and if it does it's being removed from that List. 
-     User's Contact List is passed into this method as an argument to add 
-     the contact to that list. User obejct that holds the Contact List is 
-     serialized after successful addioition of the contact to the list.
+     Asks the user for the Phone Number of the contact to remove from the 
+     user's Contact List. Check's if the contact with given Phone Number 
+     actually exists in the List and if it does it's being removed from that 
+     List. User's Contact List is passed into this method as an argument to 
+     add the contact to that list. User obejct that holds the Contact List 
+     is serialized after successful addioition of the contact to the list.
     */
     public void removeContact(HashMap contactList){
         boolean invalidPhoneNumber = true;
