@@ -5,7 +5,7 @@
  * provides with a set of methods required for the whole progeam to run and
  * startin point of the program is the startPhoneBook method.
  */
-package homework09_06_16;
+package homework.phonebook;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

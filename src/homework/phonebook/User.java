@@ -6,7 +6,7 @@
  * initializes the HashMap field to the new instance of the HashMap Object.
  * Also provides a set of getter and setter methods for those fields.
  */
-package homework09_06_16;
+package homework.phonebook;
 
 import java.io.Serializable;
 import java.util.HashMap;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package homework13_05_16;
+package homework.carApp;
 
 import java.util.Scanner;
 

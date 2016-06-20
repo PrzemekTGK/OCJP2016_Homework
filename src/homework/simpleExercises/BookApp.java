@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package homework25_05_16;
+package homework.simpleExercises;
 
 import java.util.Scanner;
 

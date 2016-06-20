@@ -4,7 +4,7 @@
  * methods for that field as wel ass a simple constructor for the class itself.
  *
  */
-package homework09_06_16;
+package homework.phonebook;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package homework25_05_16;
+package homework.simpleExercises;
 
 /**
  *
